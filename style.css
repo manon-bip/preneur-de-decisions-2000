@@ -1,0 +1,335 @@
+@font-face {
+    font-family: "Courier New";
+    src: url(fonts/courbd.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "High Tower Text";
+    src: url(fonts/HTOWERT.TTF) format("truetype");
+}
+
+@font-face {
+    font-family: "Wingdings";
+    src: url(fonts/wingding.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Arial";
+    src: url(fonts/arial.ttf) format("truetype");
+}
+
+:root {
+    --gris: #A9A9A9;
+    --noir: black;
+    --rouge: red;
+    --typo-courant: "Courier New";
+    --typo-titre: "High Tower Text";
+    --typo-symbole: "Wingdings";
+    --typo-ascii: "Arial";
+}
+
+html {
+  width: 100vw;
+  height: 100vh;
+
+  font-size: 16px;
+}
+
+/* Très très très très petits écrans */
+@media (max-width: 144px) {
+  html {
+    font-size: 10px; 
+  }
+}
+
+/* Très très très petits écrans */
+@media (min-width: 145px) and (max-width: 240px) {
+  html {
+    font-size: 11px; 
+  }
+}
+
+/* Très très petits écrans */
+@media (min-width: 241px) and (max-width: 360px) {
+  html {
+    font-size: 12px; 
+  }
+}
+
+/* Très petits écrans */
+@media (min-width: 361px) and (max-width: 480px) {
+  html {
+    font-size: 13px; 
+  }
+}
+
+/* Petits écrans */
+@media (min-width: 481px) and (max-width: 640px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+/* Écrans moyens */
+@media (min-width: 641px) and (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+/* Écrans larges */
+@media (min-width: 769px) and (max-width: 1024px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+/* Grands écrans */
+@media (min-width: 1025px) and (max-width: 1280px) {
+  html {
+    font-size: 17px;
+  }
+}
+
+/* Très grands écrans */
+@media (min-width: 1281px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+
+    background-color: var(--gris);
+
+    transition: background-color 0.5s ease;
+}
+
+p {
+    margin-bottom: 1.5rem;
+
+    font-family: var(--typo-courant);
+    font-size: 0.8rem;
+}
+
+input[type="text"] {
+    width: 80%;
+    margin-bottom: 1.5rem;
+    padding: 0.5rem;
+
+    font-family: var(--typo-courant);
+    font-size: 0.8rem; 
+
+    background-color: transparent;
+
+    border: 2px solid var(--noir);
+}
+
+::placeholder {
+  color: var(--noir);
+  opacity: 1;
+}
+
+textarea:focus, input:focus {
+    outline: none;
+}
+
+input, select, textarea {
+    color: var(--noir);
+}
+
+
+button {
+    padding: 0.6rem 1.25rem;
+
+    font-family: var(--typo-courant);
+    font-size: 0.8rem;
+
+    background-color: transparent;
+    color: var(--noir);
+
+    border: 2px solid var(--noir);
+    border-radius: 100px;
+
+    cursor: pointer;
+}
+
+button:hover {
+    color: var(--rouge);
+    border-color: var(--rouge);
+    mix-blend-mode:luminosity;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+a:hover {
+        color: var(--rouge);
+        mix-blend-mode: luminosity;
+}
+
+.container {
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.container2 {
+    width: 25rem;
+    padding: 1.5rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+
+    border: 2px solid var(--noir);
+}
+
+.container3 {
+    top: 1rem;
+    left: 1rem;
+
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+}
+
+.container3 p {
+    font-family: var(--typo-ascii);
+}
+
+.marquee {
+        width: 100vw;
+        display: flex;
+        overflow: hidden;
+}
+
+.marquee ul { 
+        min-width: 100%;
+        margin-top: 1rem;
+
+        --gap: 10vw;
+        /* impose un écart minimum (pratique sur les écrans avec une petite largeur) */
+        gap: var(--gap);
+    
+        /* permet d'avoir le même écart entre les deux listes */
+        padding: 0 calc(var(--gap) / 2);
+        display: flex;
+        flex-shrink: 0;
+        justify-content: space-around;
+        align-items: center;
+
+        font-family: var(--typo-courant);
+        font-size: 0.8rem;
+
+        list-style: none;
+
+        animation: scroll 20s linear infinite;
+}
+
+@keyframes scroll {
+    to{
+        transform:translateX(calc(-100%));
+    }
+}
+
+.titre {
+    margin-bottom: 0.5rem;
+
+    font-family: var(--typo-titre);
+    font-size: 2.5rem;
+}
+
+.titre2 {
+    margin-bottom: 1.5rem;
+
+    font-family: var(--typo-titre);
+    font-size: 2.5rem;
+}
+
+.goback {
+    margin-top: 0.35rem;
+    margin-right: 1rem;
+
+    font-size: 1.1rem;
+
+    cursor: pointer;
+}
+
+.goback:hover {
+    color: var(--rouge);
+    mix-blend-mode: luminosity;
+}
+
+.refresh {
+    margin-top: 0.4rem;
+    margin-right: 1rem;
+
+    font-size: 1rem;
+
+    cursor: pointer;
+}
+
+.home {
+    font-size: 1.5rem;
+
+    cursor: pointer;
+}
+
+.image {
+    margin-bottom: 0.25rem; 
+
+    font-family: var(--typo-courant);
+    font-size: 0.49rem;
+}
+
+.history {
+    max-height: 11.5rem;
+    min-width: 25rem;
+    max-width: 25rem;
+    overflow-y: auto;
+
+    text-align: left;
+    font-family: var(--typo-courant);
+    font-size: 0.8rem;
+
+    scrollbar-color: var(--noir) transparent;
+}
+
+.history-item {
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+
+    border-bottom: 1px solid var(--noir);
+}
+
+.special-char {
+    margin-right: 0.15rem;
+    vertical-align: middle;
+
+    font-family: var(--typo-symbole);
+    font-size: 1.25rem;
+}
