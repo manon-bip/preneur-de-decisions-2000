@@ -1,1 +1,0 @@
-# preneur-de-decisions-2000
