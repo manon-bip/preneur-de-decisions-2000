@@ -171,7 +171,7 @@ button {
 button:hover {
     color: var(--rouge);
     border-color: var(--rouge);
-    mix-blend-mode:luminosity;
+    mix-blend-mode: luminosity;
 }
 
 a {
@@ -181,7 +181,6 @@ a {
 
 a:hover {
         color: var(--rouge);
-        mix-blend-mode: luminosity;
 }
 
 .container {
@@ -212,13 +211,19 @@ a:hover {
     top: 1rem;
     left: 1rem;
 
-    position: absolute;
+    position: fixed;
+    -webkit-backface-visibility: hidden;
+
     display: flex;
     flex-direction: row;
 }
 
 .container3 p {
     font-family: var(--typo-ascii);
+}
+
+.container3:hover {
+    mix-blend-mode: luminosity;
 }
 
 .marquee {
@@ -279,11 +284,6 @@ a:hover {
     cursor: pointer;
 }
 
-.goback:hover {
-    color: var(--rouge);
-    mix-blend-mode: luminosity;
-}
-
 .refresh {
     margin-top: 0.4rem;
     margin-right: 1rem;
@@ -303,7 +303,7 @@ a:hover {
     margin-bottom: 0.25rem; 
 
     font-family: var(--typo-courant);
-    font-size: 0.49rem;
+    font-size: 0.5rem;
 }
 
 .history {
