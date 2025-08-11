@@ -119,6 +119,12 @@ body {
     transition: background-color 0.5s ease;
 }
 
+h1 {
+    font-family: var(--typo-titre);
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
 input[type="text"] {
     width: 80%;
     margin-bottom: 1.5rem;
@@ -211,7 +217,7 @@ a:hover {
     }
 }
 
-.menu-container {
+.container-menu {
     height: 100vh;
 
     display: flex;
@@ -222,27 +228,19 @@ a:hover {
 
 .container-ascii-title {
     margin-bottom: 0.5rem;
-    display: inline-block;
     text-align: center;
 }
 
 .image {
-    width: 100%;
     margin-bottom: 0.5rem; 
-
-    display: block;
 
     font-family: var(--typo-courant);
     font-size: 0.49rem;
+    text-size-adjust: none;
 }
 
 .title-menu {
-    width: 100%;
-
-    display: block;
-
-    font-family: var(--typo-titre);
-    font-size: 2.5rem;
+    text-size-adjust: none;
 }
 
 .container-navigation {
@@ -254,17 +252,15 @@ a:hover {
     position: fixed;
     -webkit-backface-visibility: hidden;
 
-    display: inline-flex;
+    display: flex;
     flex-direction: row;
 }
 
 .container-navigation p {
-    height: 100%;
-
-    display: block;
-
     font-family: var(--typo-ascii);
     font-size: 1rem;
+    font-weight: normal;
+    text-size-adjust: none;
 
     cursor: pointer;
 }
