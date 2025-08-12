@@ -122,7 +122,11 @@ body {
 h1 {
     font-family: var(--typo-titre);
     font-size: 2.5rem;
-    font-weight: bold;
+    font-synthesis: none;
+
+    text-size-adjust: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
 }
 
 input[type="text"] {
@@ -240,7 +244,6 @@ a:hover {
 }
 
 .title-menu {
-    text-size-adjust: none;
 }
 
 .container-navigation {
@@ -259,8 +262,11 @@ a:hover {
 .container-navigation p {
     font-family: var(--typo-ascii);
     font-size: 1rem;
-    font-weight: normal;
+    font-synthesis: none;
+
     text-size-adjust: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
 
     cursor: pointer;
 }
@@ -287,9 +293,6 @@ a:hover {
 
 .title-questions {
     margin-bottom: 1.5rem;
-
-    font-family: var(--typo-titre);
-    font-size: 2.5rem;
 }
 
 .text-questions {
